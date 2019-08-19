@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700i|Source+Sans+Pro&display=swap");
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+  background-color: #56a9ad;
+  background-image: url("http://studioghiblimovies.com/wp-content/uploads/2016/04/46393_1_other_anime_studio_ghibli.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+  color: #2a2223;
+  margin: 0;
+}
+.ui.card {
+  background: #56a9ad;
+}

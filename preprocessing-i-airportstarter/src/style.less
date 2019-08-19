@@ -1,0 +1,162 @@
+@primary: #ee0000;
+// @primary: blue;
+
+// TASK: define variables for padding & use them in `.bordered` below:
+
+@border-top: dotted 1px black;
+@border-bottom: solid 2px black;
+@my-padding: 4px;
+
+/* Mixins */ 
+.bordered {
+  border-top: @border-top;
+  border-bottom: @border-bottom;
+  padding-bottom: @my-padding;
+  padding-top: @my-padding;
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 2rem;
+  color: @primary;
+  .bordered();
+}
+
+a {
+  color: @primary;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  .bordered();
+}
+
+p {
+  line-height: 1.25;
+  margin: 20px 0;
+  font-size: 1.8rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+
+strong {
+  font-weight: bold;
+  color: red;
+}
+
+header {
+  border-bottom: 1px solid black;
+  margin: 20px 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 515px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+    @media (max-width: 515px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  nav {
+    margin-left: 62px;
+    @media (max-width: 515px) {
+      margin-left: 0;
+    }
+    a {
+      margin-left: 20px;
+      font-size: 1.8rem;
+    }
+    .first-anchor {
+      margin-left: 0;
+    }
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 515px) {
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+.main-content section {
+  margin: 20px 2.5%;
+  width: 45%;
+}
+
+@media (max-width: 515px) {
+  .main-content section {
+    width: 90%;
+  }
+}
+
+.main-footer {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  .bordered();
+
+  padding-top: 20px;
+}
+
+.main-footer nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.book-flight-btn {
+  display: block;
+  background-color: #ffbf27;
+  margin: 0 10px 20px;
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 515px) {
+  .book-flight-btn {
+    width: 90%;
+    height: 50px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .book-flight-btn {
+    background: green;
+    color: white;
+  }
+}

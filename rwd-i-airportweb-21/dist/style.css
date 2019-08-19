@@ -1,0 +1,167 @@
+/*
+
+==== Fixed ====
+- Layout is usually built for only one view
+- Units are usually hard coded and not responsive
+- Cheapest and fastest to get into production
+- Not industry standard
+
+==== Fluid ====
+- Site has no constraints (no max-width)
+- Usually media queries are not used in favor of a layout that is elastic in all devices
+- Not commonly seen anymore, used to be popular
+
+==== Adaptive ====
+- Website adjusts to breakpoint (media queries)
+- Layout may still be hard coded widths
+- Will still see this approach in many sites to this day 
+
+==== Responsive ====
+- Uses both breakpoints and responsive units
+- A blend of all the positive traits of fixed, fluid, and adaptive
+- Industry standard
+
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: 20px;
+}
+
+img {
+ width: 100%;
+ height: auto;
+}
+
+p {
+  line-height: 1.25;
+  margin: 20px 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+strong {
+  font-weight: bold;
+  color: red;
+}
+
+header {
+  border-bottom: 1px solid black;
+  margin: 20px 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* At the number and below, do the following */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Header Styles Here */
+header h1 {
+  font-size: 20px;
+}
+
+header nav {
+  margin-left: 62px;
+}
+
+@media (max-width: 600px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*
+Desktop First Engineering
+- The majority of your desktop CSS is NOT in a media query
+- Media queries are max-width
+- Media queries go from large numbers to small numbers
+*/
+
+/* header nav a {
+  margin-left: 20px;
+  font-size: 18px;
+} */
+
+/* tablet */
+/* @media (min-width: 600px) {
+  header nav a {
+   margin: 10px 0 0 0;
+  }
+} */
+
+/* phone */
+/* @media (min-width: 400px) {
+  header nav a {
+   
+  }
+} */
+
+/*
+Mobile First Engineering
+- The majority of your mobile CSS is NOT in a media query
+- Media queries are min-width
+- Media queries go from small numbers to large numbers
+*/
+
+/* phone */
+header nav a {
+  margin-left: 20px;
+  font-size: 18px;
+  margin: 10px 0 0 0;
+}
+
+/* tablet */
+@media (min-width: 400px) {
+ 
+}
+
+/* desktop */
+@media (min-width: 600px) {
+  header nav a {
+   margin-left: 10px;
+  }
+}
+
+header nav .first-anchor {
+  margin-left: 0;
+}
+
+.main-content {
+  display: flex;
+}
+
+.main-content section {
+  margin: 20px 5%;
+  width: 45%;
+}
+
+.main-footer {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px dashed black;
+  padding-top: 20px;
+}
+
+.main-footer nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}

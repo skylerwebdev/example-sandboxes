@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 20px 0;
+  line-height: 1.25; 
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+ul li {
+  list-style: square;
+  padding-bottom: 5px;
+}
+
+.container {
+  /* constraint */
+  max-width: 600px;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+header .logo-container img {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav a {
+  margin: 0 10px;
+  color: #A0001E;
+}
+
+.main-content {
+  border-top: 1px  solid black;
+  padding-top: 20px;
+  margin: 20px 0;
+}
+
+.main-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.lambda-button {
+ padding: 10px 15px;
+ font-size: 1.5rem;
+ border-radius: 10px;
+ cursor: pointer;
+}
+
+.lambda-button:hover {
+  background: #A0001E;
+  color: white;
+}
+
+
+.secondary-content {
+  border-top: 1px solid black;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+form {
+  max-width: 25%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin: 20px 0;
+}
+
+/* desktop first */
+@media (max-width: 600px) {
+  
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .header nav {
+    width: 100%;
+  }
+  
+  .header h1 {
+    margin: 10px 0 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  
+  .container header nav {
+    flex-direction: column;
+    border-top: 1px solid teal;
+  }
+  
+  .container header nav a {
+    padding: 10px 0;
+    margin: 0;
+    border-left: 1px solid teal;
+    border-right: 1px solid teal;
+    border-bottom: 1px solid teal;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.debug-box {
+  position: fixed;
+  top: 0;
+  max-width: 560px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #FFF;
+  border: 1px solid #999;
+  color: #333;
+  font-weight: 700;
+  padding: 1.2rem;
+  opacity: 0.8;
+/*   margin: 1.2rem; */
+}
+
+.debug-box > .small {
+  width: 60px;
+  
+}
+
+.debug-box > div {
+  overflow: hidden;  
+}
