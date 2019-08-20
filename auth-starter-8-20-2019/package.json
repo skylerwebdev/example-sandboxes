@@ -1,0 +1,35 @@
+{
+  "name": "auth-starter",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "axios": "0.18.0",
+    "boots": "0.3.0",
+    "bootstrap": "4.3.1",
+    "moment": "2.24.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-loader-spinner": "2.3.0",
+    "react-redux": "7.0.3",
+    "react-router-dom": "5.0.0",
+    "react-scripts": "2.1.8",
+    "reactstrap": "8.0.0",
+    "redux": "4.0.1",
+    "redux-thunk": "2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
